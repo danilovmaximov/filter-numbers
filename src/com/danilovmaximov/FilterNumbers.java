@@ -26,13 +26,11 @@ public class FilterNumbers {
         if (outputFilename != null) {
             try {
                 File outputFile = new File(outputFilename);
-
                 // If file does not exist, create it
                 if (outputFile.getParentFile() != null) {
                     outputFile.getParentFile().mkdirs();
                 }
                 outputFile.createNewFile();
-
                 FileWriter output = new FileWriter(outputFile);
                 output.write(outputNumbers.toString());
                 output.close();
@@ -48,21 +46,17 @@ public class FilterNumbers {
         if (amount < 1) {
             throw new IllegalArgumentException("Amount of numbers must be a positive integer.");
         }
-
         List<Integer> inputNumbers = new ArrayList<>();
-
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < amount; i++) {
             inputNumbers.add(input.nextInt());
         }
         input.close();
-
         filterNumsAndOutput(inputNumbers);
     }
 
     private static void getNumsFromFile(String source) {
         List<Integer> inputNumbers = new ArrayList<>();
-
         File sourceFile = new File(source);
         try {
             Scanner input = new Scanner(sourceFile);
@@ -70,7 +64,6 @@ public class FilterNumbers {
                 inputNumbers.add(input.nextInt());
             }
             input.close();
-
             filterNumsAndOutput(inputNumbers);
         } catch (FileNotFoundException e) {
             System.err.println("Input file was not found. Make sure such file exists.");
