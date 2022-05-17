@@ -3,14 +3,12 @@ package com.danilovmaximov;
 import java.util.List;
 
 public class Main {
-    static NumbersFilter filter;
-
     public static void main(String[] args) {
         if (args.length == 0) {
             throw new IllegalArgumentException("No arguments provided for the application");
         }
 
-        filter = new NumbersFilterImpl();
+        NumbersFilter filter = new NumbersFilterImpl();
         List<Integer> filteredNumbers;
 
         String source = args[0];
