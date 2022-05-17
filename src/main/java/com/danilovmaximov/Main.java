@@ -1,24 +1,29 @@
 package com.danilovmaximov;
 
+import java.util.List;
+
 public class Main {
     static NumbersFilter filter;
 
     public static void main(String[] args) {
         if (args.length == 0) {
             throw new IllegalArgumentException("No arguments provided for the application");
-        } else if (args.length == 2) {
-            // output file is specified
-            filter = new NumberFilterImpl(args[1]);
-        } else {
-            // output file is not specified
-            filter = new NumberFilterImpl();
         }
+
+        filter = new NumbersFilterImpl();
+        List<Integer> filteredNumbers;
 
         String source = args[0];
         try {
-            filter.filterFromConsole(Integer.parseInt(source));
+            filteredNumbers = filter.filterFromConsole(Integer.parseInt(source));
         } catch (NumberFormatException e) {
-            filter.filterFromFile(source);
+            filteredNumbers = filter.filterFromFile(source);
+        }
+
+        if (args.length == 2) {
+            filter.printToFile(filteredNumbers, args[1]);
+        } else {
+            filter.printToConsole(filteredNumbers);
         }
     }
 }
