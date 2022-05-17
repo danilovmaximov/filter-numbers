@@ -11,9 +11,6 @@ import java.util.stream.Collectors;
 import static java.lang.System.exit;
 
 public class NumbersFilterImpl implements NumbersFilter {
-
-    public NumbersFilterImpl() { }
-
     @Override
     public List<Integer> filterFromConsole(Integer amount) {
         if (amount < 1) {
