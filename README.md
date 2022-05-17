@@ -4,9 +4,11 @@ This is a test task for TTC Marconi. The script filters numbers according to the
 - If the amount is even, it returns even numbers
 
 # Usage
-Compile script from the project root using: _javac src/com/danilovmaximov/FilterNumbers.java_
+Compile script from the project root using: _javac src/com/danilovmaximov/Main.java_
 
-Start app from the "src" directory using: _java com.danilovmaximov.FilterNumbers_
+Start app from the "src" directory using: _java com.danilovmaximov.Main_
+
+Or just use IDE. :-)
 
 # Startup Parameters
 
