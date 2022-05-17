@@ -13,7 +13,7 @@ Or just use IDE. :-)
 # Startup Parameters
 
 First parameter (madatory): input
-  - Either a positive integer to reveive input from the console
+  - Either a positive integer to reveive input from the console (program will receive amount of integers equal to specified number)
   - Or a file name like _input.txt_. File must be located in the directory from which the app is being started.
  
 **Input format:** integers separated by a space. For example: 1 -2 -3 4 5
