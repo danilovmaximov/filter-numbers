@@ -14,7 +14,7 @@ Or just use IDE. :-)
 
 First parameter (madatory): input
   - Either a positive integer to reveive input from the console (program will receive amount of integers equal to specified number)
-  - Or a file name like _input.txt_. File must be located in the directory from which the app is being started.
+  - Or a file name like _input.txt_. File must be located in the directory from which the app is being started (in case of IDE in project root).
  
 **Input format:** integers separated by a space. For example: 1 -2 -3 4 5
 
