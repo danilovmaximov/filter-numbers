@@ -6,7 +6,7 @@ This is a test task for TTC Marconi. The script filters numbers according to the
 # Usage
 Compile script from the project root using: _javac src/main/java/com/danilovmaximov/Main.java_
 
-Start app from the "java" directory using: _java com.danilovmaximov.Main_
+Start app from the "target/classes/" or "src/main/java" directory using: _java com.danilovmaximov.Main_
 
 Or just use IDE. :-)
 
