@@ -28,6 +28,7 @@ public interface NumbersFilter {
     /**
      * Prints list of integers to a file.
      * @param source list to be printed
+     * @param outputFileName name of file where goes the output
      */
     static void printToFile(List<Integer> source, String outputFileName) {
         try {
