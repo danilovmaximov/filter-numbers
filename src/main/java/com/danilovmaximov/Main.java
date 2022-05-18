@@ -19,9 +19,9 @@ public class Main {
         }
 
         if (args.length == 2) {
-            filter.printToFile(filteredNumbers, args[1]);
+            NumbersFilter.printToFile(filteredNumbers, args[1]);
         } else {
-            filter.printToConsole(filteredNumbers);
+            NumbersFilter.printToConsole(filteredNumbers);
         }
     }
 }

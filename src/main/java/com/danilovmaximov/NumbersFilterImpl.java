@@ -2,7 +2,6 @@ package com.danilovmaximov;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -43,30 +42,8 @@ public class NumbersFilterImpl implements NumbersFilter {
         return filter(receivedNumbers);
     }
 
-    @Override
-    public void printToFile(List<Integer> source, String outputFileName) {
-        try {
-            File outputFile = new File(outputFileName);
-
-            // If file does not exist, create it
-            if (outputFile.getParentFile() != null) outputFile.getParentFile().mkdirs();
-            outputFile.createNewFile();
-
-            FileWriter output = new FileWriter(outputFile);
-            output.write(source.toString());
-            output.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void printToConsole(List<Integer> source) {
-        System.out.println(source);
-    }
-
     private List<Integer> filter(List<Integer> unfiltered) {
-        List<Integer> filtered;
+        final List<Integer> filtered;
         if (unfiltered.size() % 2 == 0) {
             filtered = unfiltered.stream()
                     .filter(num -> num % 2 == 0)
